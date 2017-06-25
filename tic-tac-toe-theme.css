@@ -1,0 +1,50 @@
+body {
+  background-image: url("https://ae01.alicdn.com/kf/HTB198YOKpXXXXbVXpXXq6xXFXXXP/Free-shipping-Star-Wars-Hollywood-movie-Mark-Hamill-font-b-Harrison-b-font-font-b-Ford.jpg");
+  background-size:;
+  background-repeat:no-repeat;
+  text-align: center;
+  color: yellow;
+  font-family: 'Audiowide', cursive;
+}
+.inner{
+  display:inline-block;
+  margin: 0 20px;
+}
+.turn:hover{
+  cursor: pointer;
+}
+#gameboard {
+  height: 364px;
+  width: 364px;
+  background-image: url("");
+  background-size: cover;
+  margin: 40px auto 40px auto;
+  color: ;
+}
+.square{
+  float: left;
+  background-color: ;
+  background-size:120px 120px;
+  background-repeat:no-repeat;
+  width: 120px;
+  height: 120px;
+  border: ;
+  font-size: 1%;
+  color: black;
+}
+.square:hover{
+  cursor: pointer;;
+}
+.row{
+  background-color: ;
+  clear: both;
+}
+.bottom{
+  border-bottom: 2px solid white;
+}
+.right{
+  border-right: 2px solid white;
+}
+#turnO {
+  color: grey;
+}

@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-  var turn = "X";//defaults players turn to X
-  var computersTurn = "O"; //defaults computer's turn to O
+  var turn = "Leia";//defaults players turn to X
+  var computersTurn = "Vader"; //defaults computer's turn to O
   var turns = ["#", "#", "#", "#", "#", "#", "#", "#", "#"];//stores values to check for winner later.
   var xButton = document.querySelector("#turnX");
   var oButton = document.querySelector("#turnO");
@@ -12,8 +12,8 @@ $(document).ready(function() {
 
   //change player's turn to X and computer's turn to O
   $("#turnX").click(function(){
-    turn = "O"
-    computersTurn = "X";
+    turn = "Vader"
+    computersTurn = "Leia";
     xButton.style.color = "grey";
     oButton.style.color = "yellow";
     reset();
@@ -21,8 +21,8 @@ $(document).ready(function() {
 
   //change player's turn back to O and computer's turn to X
   $("#turnO").click(function(){
-    turn = "X"
-    computersTurn = "O";
+    turn = "Leia"
+    computersTurn = "Vader";
     xButton.style.color = "yellow";
     oButton.style.color = "grey";
     reset();
@@ -36,7 +36,7 @@ $(document).ready(function() {
       var move = $("#"+computersMove).text();
       if(move==="#"){
         $("#" + computersMove).text(computersTurn);//displays on page
-        if(computersTurn === "X"){
+        if(computersTurn === "Leia"){
            $("#" + computersMove).css("background-image", "url(" + leia + ")");
         }else{
           $("#" + computersMove).css("background-image", "url(" + vader + ")");
@@ -53,7 +53,7 @@ $(document).ready(function() {
       count ++;
       turns[id] = turn;//adds turn to the array
       $("#"+id).text(turn);//places your mark in the square
-      if(turn==="X"){
+      if(turn==="Leia"){
      $("#"+id).css("background-image", "url(" + leia + ")");
       }else {
       $("#"+id).css("background-image", "url(" + vader + ")");
@@ -70,40 +70,40 @@ $(document).ready(function() {
    if (turnArray[0] === currentTurn && turnArray[1]===currentTurn && turnArray[2] ===currentTurn){//top row win
      gameOn = true;
      reset();
-     alert("Player " + currentTurn + " wins across the top row!");
+     alert(currentTurn + " wins across the top row!");
    }
    else if (turnArray[2] === currentTurn && turnArray[4]===currentTurn && turnArray[6] === currentTurn) {
       gameOn = true;//diagonal bottomL-topR win
       reset();
-      alert("Player " + currentTurn + " wins diagonally!");
+      alert(currentTurn + " wins diagonally!");
     }
     else if (turnArray[0] === currentTurn && turnArray[3]===currentTurn && turnArray[6] === currentTurn) {
       gameOn = true;//left column win
       reset();
-      alert("Player " + currentTurn + " wins in the left column!");
+      alert(currentTurn + " wins in the left column!");
       }
     else if (turnArray[0] === currentTurn && turnArray[4]===currentTurn && turnArray[8] === currentTurn) {
       gameOn = true;//diagonal topL-bottomR win
       reset();
-      alert("Player " + currentTurn + " wins diagonally!");
+      alert(currentTurn + " wins diagonally!");
     }
     else if (turnArray[1] === currentTurn && turnArray[4]===currentTurn && turnArray[7] === currentTurn) {
       gameOn = true;//middle column win
       reset();
-      alert("Player " + currentTurn + " wins in the middle column!");
+      alert(currentTurn + " wins in the middle column!");
     }
     else if (turnArray[2] === currentTurn && turnArray[5]===currentTurn && turnArray[8] === currentTurn) {
       gameOn = true;//right column win
       reset();
-      alert("Player " + currentTurn + " wins in the right column!");
+      alert(currentTurn + " wins in the right column!");
     } else if (turnArray[3] === currentTurn && turnArray[4]===currentTurn && turnArray[5] === currentTurn) {
       gameOn = true;//middle row win
       reset();
-      alert("Player " + currentTurn + " wins across the middle row!");
+      alert(currentTurn + " wins across the middle row!");
     }else if (turnArray[6] === currentTurn && turnArray[7]===currentTurn && turnArray[8] === currentTurn) {
       gameOn = true;//bottom row win
       reset();
-      alert("Player " + currentTurn + " wins across the bottom row!");
+      alert(currentTurn + " wins across the bottom row!");
     }else if (!(turnArray.includes("#"))) {//if there are no more open spots
       gameOn = true;//bottom row win
       reset();

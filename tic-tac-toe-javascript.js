@@ -8,7 +8,7 @@ $(document).ready(function() {
   var gameOn = false;  //keeps track if it is the computer's turn
   var count = 0; //keeps track of computer's turn so no infinite loop
   var leia = "https://4.bp.blogspot.com/-nQTVlD6_b5Y/V74SQkM6NZI/AAAAAAAAWJE/O7Tn3sCkdv8aHv4H678aBvVQBGbMpfDhgCLcB/s1600/9fc41654.png";
-  var vader = "http://cdn.smosh.com/sites/default/files/ftpuploads/bloguploads/darth-vader-headshot.jpg";
+  var vader = "https://spacequotations.com/wp-content/uploads/2018/09/darth-vader-star-wars-lack-of-faith.jpg";
 
   //change player's turn to X and computer's turn to O
   $("#turnX").click(function(){
